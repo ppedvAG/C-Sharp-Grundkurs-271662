@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="ArraysBedingungen/ArraysBedingungen.csproj" />
   <Project Path="Demo-Tag1/Demo-Tag1.csproj" />
+  <Project Path="Demo-Tag2/Demo-Tag2.csproj" Id="42008de2-9c06-4d1c-8a84-3ee2458279a0" />
 </Solution>

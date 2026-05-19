@@ -49,11 +49,22 @@ namespace Demo_Tag1 {
                 Console.WriteLine("Das war keine gültige Zahl.");
             }
 
-           
+
 
 
             //Console.WriteLine("Beliebige Taste drücken zum Beenden...");
             //Console.ReadKey();
+
+            // Berechnung von Geschwindigkeit
+            //int sekundenGes = minuten * 60 + stunden * 3600;
+
+            int streckeGes = 4500;
+
+            //double meterProSekunde = (double)streckeGes / sekundenGes;
+
+            double kilometerProStunde = meterProSekunde * 3.6;
+
+            double milesProStunde = meterProSekunde * 2.23694;
         }
     }
 }
