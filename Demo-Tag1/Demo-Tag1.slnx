@@ -3,6 +3,7 @@
   <Project Path="Demo-Tag1/Demo-Tag1.csproj" />
   <Project Path="Demo-Tag2/Demo-Tag2.csproj" Id="42008de2-9c06-4d1c-8a84-3ee2458279a0" />
   <Project Path="Demo-Tag3/Demo-Tag3.csproj" Id="e22508f9-71d5-4111-a77c-c77abba7e5e7" />
+  <Project Path="Lab06/Lab06.csproj" Id="87bdf065-68a2-4ec6-a8ac-1140123676e6" />
   <Project Path="Loesung-Lab04/Loesung-Lab04.csproj" Id="6d827239-562f-4380-975e-5d0032e81360" />
   <Project Path="Loesung-Lab05/Loesung-Lab05.csproj" Id="61f68cb2-ad7f-4afb-a3f3-5f86a2cd72d7" />
   <Project Path="OOP/OOP.csproj" Id="3a635322-f6df-487f-9dcc-2492fe9928ad" />

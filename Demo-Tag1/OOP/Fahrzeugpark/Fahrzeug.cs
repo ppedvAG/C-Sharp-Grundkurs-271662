@@ -14,6 +14,8 @@ namespace OOP.Fahrzeugpark
         public Color Farbe {  get; set; } = Color.White;
         public string Name { get; private set; } = "";
 
+        public static int AnzahlFahrzeuge { get; private set; } = 0; // statische Eigenschaft, die die Anzahl der Fahrzeuge zählt
+
         // Feld brauche ich, damit ich das set einschränken kann
         private double geschwindigkeit = 0;
         // Eigenschaft Geschwindigkeit, mit Überprüfung
@@ -32,7 +34,10 @@ namespace OOP.Fahrzeugpark
         // Konstruktor rufe ich auf, wenn ich ein neues Objekt erstelle zB. Fahrzeug fahrzeug = new Fahrzeug()
         // mit new und dem Konstruktornamen wird der Konstruktor aufgerufen.
         // Wenn man keinen Konstruktor schreibt, ist im Hintergrund standardmäßig ein leerer Konstruktor da:
-        public Fahrzeug() { } // Basiskonstruktor der auch existiert wenn ich ihn nicht schreibe
+        public Fahrzeug() {
+            AnzahlFahrzeuge++;
+            this.Name = "Fahrzeug " + AnzahlFahrzeuge; 
+        } // Basiskonstruktor der auch existiert wenn ich ihn nicht schreibe
 
         // Ich kann mehrere Konstruktoren erstellen, es wird automatisch der passende aufgerufen
         // Konstruktoren werden verwendet um "Startwerte" für Eigenschaften festzulegen zB. Name
@@ -54,6 +59,18 @@ namespace OOP.Fahrzeugpark
         public void InfoAusgabe()
         {
             Console.WriteLine($"Fahrzeug {Name} hat Farbe {Farbe.Name} und Geschwindigkeit {Geschwindigkeit}");
+        }
+
+        // Destruktor, mit Console.Writeline, um zu sehen wann Objekte gelöscht werden
+        ~Fahrzeug()
+        {
+            Console.WriteLine(Name+" wurde gelöscht");
+        }
+
+        // Statische Methode, die ich über die Klasse aufrufen kann, ohne ein Objekt zu erstellen
+        public static void InfoGesamt()
+        {
+            Console.WriteLine($"Insgesamt gibt es {AnzahlFahrzeuge} Fahrzeuge.");
         }
 
     }
