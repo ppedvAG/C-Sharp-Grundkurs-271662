@@ -34,25 +34,26 @@
             #endregion
 
             #region Schleifen mit Arrays
-            //// Verwendung mit Arrays bei for Schleifen
-            //int[] zahlen = new int[] { 1, 2, 3, 4, 5 , 4, 56, 64};
+            // Verwendung mit Arrays bei for Schleifen
+            int[] zahlen = new int[] { 1, 2, 3, 4, 5, 4, 56, 64 };
+            
 
-            //for (int i = 0; i < zahlen.Length; i++)
-            //{
-            //    if (zahlen[i] % 2 == 0)
-            //    {
-            //        Console.WriteLine($"Die Zahl {zahlen[i]} an Index {i} ist durch 2 teilbar.");
-            //    }
-            //}
-            //Console.ReadKey();
-            //// foreach Schleife: speziell für Collections (Arrays, Listen, ...)  iteriert automatisch über alle Elementn
-            //foreach(int zahl in zahlen)
-            //{
-            //    if(zahl%2 != 0)
-            //    {
-            //        Console.WriteLine($"Die Zahl {zahl} ist nicht durch 2 teilbar.");
-            //    }
-            //}
+            for (int i = 0; i < zahlen.Length; i++)
+            {
+                if (zahlen[i] % 2 == 0)
+                {
+                    Console.WriteLine($"Die Zahl {zahlen[i]} an Index {i} ist durch 2 teilbar.");
+                }
+            }
+            Console.ReadKey();
+            // foreach Schleife: speziell für Collections (Arrays, Listen, ...)  iteriert automatisch über alle Elementn
+            foreach (int zahl in zahlen)
+            {
+                if (zahl % 2 != 0)
+                {
+                    Console.WriteLine($"Die Zahl {zahl} ist nicht durch 2 teilbar.");
+                }
+            }
 
 
             #endregion

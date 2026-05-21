@@ -5,4 +5,5 @@
   <Project Path="Demo-Tag3/Demo-Tag3.csproj" Id="e22508f9-71d5-4111-a77c-c77abba7e5e7" />
   <Project Path="Loesung-Lab04/Loesung-Lab04.csproj" Id="6d827239-562f-4380-975e-5d0032e81360" />
   <Project Path="Loesung-Lab05/Loesung-Lab05.csproj" Id="61f68cb2-ad7f-4afb-a3f3-5f86a2cd72d7" />
+  <Project Path="OOP/OOP.csproj" Id="3a635322-f6df-487f-9dcc-2492fe9928ad" />
 </Solution>
