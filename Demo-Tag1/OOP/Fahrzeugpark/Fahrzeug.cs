@@ -73,5 +73,11 @@ namespace OOP.Fahrzeugpark
             Console.WriteLine($"Insgesamt gibt es {AnzahlFahrzeuge} Fahrzeuge.");
         }
 
+        // ToString Methode Überschreiben.
+        public sealed override string ToString()
+        {
+            return base.ToString()+": "+Name;
+        }
+
     }
 }

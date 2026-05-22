@@ -32,12 +32,12 @@
             #endregion
 
             #region tag4
-            for (int i = 0; i < 5_000; i++)
-            {
-                Fahrzeug fahrzeug = new Fahrzeug();
-            }
+            //for (int i = 0; i < 5_000; i++)
+            //{
+            //    Fahrzeug fahrzeug = new Fahrzeug();
+            //}
 
-            Fahrzeug.InfoGesamt();
+            //Fahrzeug.InfoGesamt();
 
             // Unterschied Ref und Out
 
@@ -69,6 +69,18 @@
             //Console.WriteLine(ergebnis);
             //Console.WriteLine(anzahlSummen);
 
+
+            #endregion
+
+            #region tag5
+            // Vererbung
+
+            // Jede Klasse erbt von der Basisklasse Object, die Methoden wie ToString, Equals, GetHashCde, GetType bereitstellt
+            // Also unser Fahrzeug ist auch ein Object und hat all diese Methoden, wobei man einige sogar überschreiben kann.
+            Fahrzeug fahrzeug = new Fahrzeug("BMW", Color.Blue, 100);
+            Console.WriteLine(fahrzeug.GetType());
+            Console.WriteLine(fahrzeug.ToString());
+            Console.WriteLine(fahrzeug);
             #endregion
         }
     }
