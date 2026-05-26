@@ -7,12 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Fahrzeugpark\IBeladbar.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Fahrzeugpark\IBeladbar.cs" />
-  </ItemGroup>
-
 </Project>
