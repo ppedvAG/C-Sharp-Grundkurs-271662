@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace OOP.Fahrzeugpark
 {
     // Klasse Fahrzeug beschreibt wie ein Fahrzeug aufgebaut ist
-    public class Fahrzeug
+    // Fahrzeug muss abstrakt sein, da InfoAusgabe abstrakt ist
+    public abstract class Fahrzeug
     {
         // Eigenschaften von einem Fahrzeug
         public Color Farbe {  get; set; } = Color.White;
@@ -41,6 +42,8 @@ namespace OOP.Fahrzeugpark
 
         // Ich kann mehrere Konstruktoren erstellen, es wird automatisch der passende aufgerufen
         // Konstruktoren werden verwendet um "Startwerte" für Eigenschaften festzulegen zB. Name
+        // Konstruktoren können nicht direkt aufgerufen werden, weil Fahrzeug abstrakt ist, somit kann man kein Objekt davon erstellen,
+            // aber die Konstruktoren werden von den abgeleiteten Klassen verwendet
         public Fahrzeug(string name)
         {
             this.Name = name;
@@ -55,11 +58,9 @@ namespace OOP.Fahrzeugpark
             Geschwindigkeit = geschwindigkeit;
         }
 
-        // Public Methode, die ich über die Fahrzeug Objekte aufrufen kann und mir die Infos ausgibt
-        public void InfoAusgabe()
-        {
-            Console.WriteLine($"Fahrzeug {Name} hat Farbe {Farbe.Name} und Geschwindigkeit {Geschwindigkeit}");
-        }
+        // abstrakte Methode, die ich über die Fahrzeug Objekte aufrufen kann und mir die Infos ausgibt
+        // muss überschrieben werden.
+        public abstract void InfoAusgabe();
 
         // Destruktor, mit Console.Writeline, um zu sehen wann Objekte gelöscht werden
         ~Fahrzeug()

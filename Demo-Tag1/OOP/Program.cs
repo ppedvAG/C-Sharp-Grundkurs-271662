@@ -77,10 +77,40 @@
 
             // Jede Klasse erbt von der Basisklasse Object, die Methoden wie ToString, Equals, GetHashCde, GetType bereitstellt
             // Also unser Fahrzeug ist auch ein Object und hat all diese Methoden, wobei man einige sogar überschreiben kann.
-            Fahrzeug fahrzeug = new Fahrzeug("BMW", Color.Blue, 100);
-            Console.WriteLine(fahrzeug.GetType());
-            Console.WriteLine(fahrzeug.ToString());
-            Console.WriteLine(fahrzeug);
+            //Fahrzeug fahrzeug = new Fahrzeug("BMW", Color.Blue, 100);
+            //Console.WriteLine(fahrzeug.GetType());
+            //Console.WriteLine(fahrzeug.ToString());
+            //Console.WriteLine(fahrzeug);
+
+            //// Polymorphismus
+            //Fahrzeug fahrzeug = new Fahrzeug(); // nicht erlaubt, da Fahrzeug eine abstrakte Klasse ist
+            //PKW pkw = new PKW();
+            //Fahrzeug pkwAlsFahrzeug = new PKW();
+
+            //// GetType gibt und des Laufzeittyp, also was tatsächlich hinter der Variable steckt
+            //// typeof gibt uns den Typ, also die Klasse, die wir angeben
+            //Console.WriteLine(fahrzeug.GetType());
+            //Console.WriteLine(typeof(Fahrzeug));
+
+            //Console.WriteLine(fahrzeug.GetType() == typeof(Fahrzeug));
+            //Console.WriteLine(fahrzeug.GetType() == typeof(PKW));
+            //Console.WriteLine(pkw.GetType() == typeof(PKW));
+            //Console.WriteLine(pkw.GetType() == typeof(Fahrzeug));
+            //Console.WriteLine(pkwAlsFahrzeug.GetType() == typeof(Fahrzeug));
+            //Console.WriteLine(pkwAlsFahrzeug.GetType() == typeof(PKW));
+
+            //// is Operator überprüft, ob die Variable mit einem Typ kompatibel ist,
+            //// also ob die Variable eine Instanz von diesem Typ oder einer abgeleiteten Klasse ist
+            //Console.WriteLine("\n");
+            //Console.WriteLine(fahrzeug is Fahrzeug); // true
+            //Console.WriteLine(fahrzeug is PKW); // false
+            //Console.WriteLine(pkw is PKW); // true
+            //Console.WriteLine(pkw is Fahrzeug); // true
+
+            //Console.WriteLine(pkw is object);// true, da alle Klassen von object erben
+
+            // Abstrakte Member und Klassen
+
             #endregion
         }
     }

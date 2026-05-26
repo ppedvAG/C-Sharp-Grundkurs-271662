@@ -19,6 +19,12 @@ namespace OOP.Fahrzeugpark
             AnzahlTüren = anzahlTüren;
         }
 
+        // Info Methoe muss überschieben werden, weil sie abstrakt ist.
+        public override void InfoAusgabe()
+        {
+            Console.WriteLine($"PKW {Name} hat Farbe {Farbe.Name} und Geschwindigkeit {Geschwindigkeit} und {AnzahlTüren} Türen");
+        }
+
         // Override geht nicht weil sie gesealed wurde
         //public override string ToString()
         //{
