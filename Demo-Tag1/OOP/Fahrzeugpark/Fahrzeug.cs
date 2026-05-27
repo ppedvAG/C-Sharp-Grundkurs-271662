@@ -32,6 +32,8 @@ namespace OOP.Fahrzeugpark
             }
         }
 
+
+
         // Konstruktor rufe ich auf, wenn ich ein neues Objekt erstelle zB. Fahrzeug fahrzeug = new Fahrzeug()
         // mit new und dem Konstruktornamen wird der Konstruktor aufgerufen.
         // Wenn man keinen Konstruktor schreibt, ist im Hintergrund standardmäßig ein leerer Konstruktor da:

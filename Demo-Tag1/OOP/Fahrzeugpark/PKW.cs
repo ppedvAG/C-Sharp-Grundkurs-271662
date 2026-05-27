@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOP.Fahrzeugpark
 {
-    class PKW: Fahrzeug
+    public class PKW: Fahrzeug
     {
         public int AnzahlTüren {  get; set; }
         public PKW()
