@@ -54,13 +54,22 @@ namespace Demo_WindowsForms
 
         private void lstRechnungen_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lstRechnungen.SelectedItem != null)
+            if (lstRechnungen.SelectedItem != null)
             {
                 Rechnung rechnung = lstRechnungen.SelectedItem as Rechnung;
                 txtZahl1.Text = rechnung.Zahl1.ToString();
                 txtZahl2.Text = rechnung.Zahl2.ToString();
                 lblErgebnis.Text = rechnung.Ergebnis.ToString();
                 cmbRechenoperation.SelectedIndex = (int)(rechnung.Op - 1);
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Möchtest du das Programm schließen?", "Schließen", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
             }
         }
     }

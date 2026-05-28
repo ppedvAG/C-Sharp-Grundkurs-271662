@@ -146,6 +146,7 @@
             Controls.Add(txtZahl1);
             Name = "Form1";
             Text = "Taschenrechner";
+            FormClosing += Form1_FormClosing;
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
