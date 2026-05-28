@@ -3,6 +3,7 @@
   <Project Path="Demo-Tag1/Demo-Tag1.csproj" />
   <Project Path="Demo-Tag2/Demo-Tag2.csproj" Id="42008de2-9c06-4d1c-8a84-3ee2458279a0" />
   <Project Path="Demo-Tag3/Demo-Tag3.csproj" Id="e22508f9-71d5-4111-a77c-c77abba7e5e7" />
+  <Project Path="Demo-WindowsForms/Demo-WindowsForms.csproj" Id="da9a652f-5649-40a8-b25c-2037b80fef79" />
   <Project Path="FahrzeugparkKomplett/FahrzeugparkKomplett.csproj" Id="52e97b73-222b-47a8-a415-93c7c1345517" />
   <Project Path="Lab06/Lab06.csproj" Id="87bdf065-68a2-4ec6-a8ac-1140123676e6" />
   <Project Path="Lab07/Lab07.csproj" Id="2c8df33c-970a-4105-8b9a-0aabe2a24442" />

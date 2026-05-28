@@ -95,4 +95,38 @@ namespace Demo_Tag3
             return ergebnis;
         }
     }
+
+    public class Rechnung
+    {
+        public double Zahl1 { get; set; }
+
+        public double Zahl2 { get; set; }
+
+        public double Ergebnis { get; set; }
+
+        public Calculator.Rechenoperation Op { get; set; }
+
+        public Rechnung(double zahl1, double zahl2, Calculator.Rechenoperation rechenoperation, double ergebnis)
+        {
+            Zahl1 = zahl1;
+            Zahl2 = zahl2;
+            Op = rechenoperation;
+            Ergebnis = ergebnis;
+        }
+
+        public override string ToString()
+        {
+            switch (Op)
+            {
+                case Calculator.Rechenoperation.Addition:
+                    return $"{Zahl1} + {Zahl2} = {Ergebnis}";
+                case Calculator.Rechenoperation.Subtraktion:
+                    return $"{Zahl1} - {Zahl2} = {Ergebnis}";
+                case Calculator.Rechenoperation.Multiplikation:
+                    return $"{Zahl1} * {Zahl2} = {Ergebnis}";
+                default:
+                    return $"{Zahl1} / {Zahl2} = {Ergebnis}";
+            }
+        }
+    }
 }
