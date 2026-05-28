@@ -38,6 +38,8 @@
             btnLoeschen = new Button();
             cmbRechenoperation = new ComboBox();
             lstRechnungen = new ListBox();
+            btnLoad = new Button();
+            btnSave = new Button();
             SuspendLayout();
             // 
             // txtZahl1
@@ -92,7 +94,7 @@
             // 
             // btnBerechne
             // 
-            btnBerechne.Location = new Point(12, 93);
+            btnBerechne.Location = new Point(356, 93);
             btnBerechne.Name = "btnBerechne";
             btnBerechne.Size = new Size(112, 34);
             btnBerechne.TabIndex = 7;
@@ -102,7 +104,7 @@
             // 
             // btnLoeschen
             // 
-            btnLoeschen.Location = new Point(12, 142);
+            btnLoeschen.Location = new Point(356, 133);
             btnLoeschen.Name = "btnLoeschen";
             btnLoeschen.Size = new Size(112, 34);
             btnLoeschen.TabIndex = 8;
@@ -123,17 +125,39 @@
             // 
             lstRechnungen.FormattingEnabled = true;
             lstRechnungen.ItemHeight = 25;
-            lstRechnungen.Location = new Point(17, 239);
+            lstRechnungen.Location = new Point(13, 84);
             lstRechnungen.Name = "lstRechnungen";
             lstRechnungen.Size = new Size(231, 179);
             lstRechnungen.TabIndex = 10;
             lstRechnungen.SelectedIndexChanged += lstRechnungen_SelectedIndexChanged;
             // 
+            // btnLoad
+            // 
+            btnLoad.Location = new Point(250, 189);
+            btnLoad.Name = "btnLoad";
+            btnLoad.Size = new Size(218, 34);
+            btnLoad.TabIndex = 11;
+            btnLoad.Text = "Rechnungen Laden";
+            btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Click += btnLoad_Click;
+            // 
+            // btnSave
+            // 
+            btnSave.Location = new Point(250, 229);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(218, 34);
+            btnSave.TabIndex = 12;
+            btnSave.Text = "Rechnungen Speichern";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(498, 480);
+            ClientSize = new Size(498, 298);
+            Controls.Add(btnSave);
+            Controls.Add(btnLoad);
             Controls.Add(lstRechnungen);
             Controls.Add(cmbRechenoperation);
             Controls.Add(btnLoeschen);
@@ -164,5 +188,7 @@
         private Button btnLoeschen;
         private ComboBox cmbRechenoperation;
         private ListBox lstRechnungen;
+        private Button btnLoad;
+        private Button btnSave;
     }
 }

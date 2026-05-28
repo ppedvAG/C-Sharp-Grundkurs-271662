@@ -1,6 +1,8 @@
 namespace Demo_WindowsForms
 {
     using Demo_Tag3;
+    using System.Text.Json;
+
     public partial class Form1 : Form
     {
 
@@ -50,10 +52,12 @@ namespace Demo_WindowsForms
             txtZahl2.Text = "";
             lblErgebnis.Text = "Ergebnis";
             cmbRechenoperation.SelectedIndex = 0;
+            lstRechnungen.Items.Clear();
         }
 
         private void lstRechnungen_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (lstRechnungen.SelectedItem != null)
             {
                 Rechnung rechnung = lstRechnungen.SelectedItem as Rechnung;
@@ -70,6 +74,40 @@ namespace Demo_WindowsForms
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            // Dialog zum Speichern der Datei anzeigen
+            SaveFileDialog sf = new SaveFileDialog();
+            sf.Filter = "Json Datei (*.json)|*.json";
+            sf.FileName = "rechnungen.json";
+            if (sf.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter sw = new StreamWriter(sf.FileName))
+                {
+                    sw.Write(JsonSerializer.Serialize(lstRechnungen.Items.Cast<Rechnung>().ToList()));
+                }
+            }
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            // Listbox leeren
+            lstRechnungen.Items.Clear();
+            // Dialog zum Öffnen der Datei anzeigen
+            OpenFileDialog of = new OpenFileDialog();
+            of.Filter = "Json Datei (*.json)|*.json";
+            of.FileName = "rechnungen.json";
+            if(of.ShowDialog()==DialogResult.OK)
+            {
+                // Datei lesen Zeile für Zeile
+                using (StreamReader sr = new StreamReader(of.FileName)) {
+                    lstRechnungen.Items.AddRange(JsonSerializer.Deserialize<List<Rechnung>>(sr.ReadToEnd()).ToArray());
+                    
+                  
+                }
             }
         }
     }

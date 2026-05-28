@@ -106,12 +106,46 @@ namespace Demo_Tag3
 
         public Calculator.Rechenoperation Op { get; set; }
 
-        public Rechnung(double zahl1, double zahl2, Calculator.Rechenoperation rechenoperation, double ergebnis)
+        public Rechnung(double zahl1, double zahl2, Calculator.Rechenoperation op, double ergebnis)
         {
             Zahl1 = zahl1;
             Zahl2 = zahl2;
-            Op = rechenoperation;
+            Op = op;
             Ergebnis = ergebnis;
+        }
+        public static Rechnung MapStringToRechnung(string rechnungString)
+        {
+            // Beispiel: "5 + 3 = 8"
+            string[] parts = rechnungString.Split(' ');
+            if (parts.Length == 5)
+            {
+                double zahl1 = double.Parse(parts[0]);
+                double zahl2 = double.Parse(parts[2]);
+                double ergebnis = double.Parse(parts[4]);
+                Calculator.Rechenoperation op;
+                switch (parts[1])
+                {
+                    case "+":
+                        op = Calculator.Rechenoperation.Addition;
+                        break;
+                    case "-":
+                        op = Calculator.Rechenoperation.Subtraktion;
+                        break;
+                    case "*":
+                        op = Calculator.Rechenoperation.Multiplikation;
+                        break;
+                    case "/":
+                        op = Calculator.Rechenoperation.Division;
+                        break;
+                    default:
+                        throw new FormatException("Ungültige Rechenoperation");
+                }
+                return new Rechnung(zahl1, zahl2, op, ergebnis);
+            }
+            else
+            {
+                throw new FormatException("Ungültiges Rechnungsformat");
+            }
         }
 
         public override string ToString()
